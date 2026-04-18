@@ -6,7 +6,7 @@ require (
 	github.com/boombuler/barcode v1.1.0
 	github.com/stretchr/testify v1.11.1
 	github.com/tsarna/bytes-cty-type v0.1.0
-	github.com/zclconf/go-cty v1.18.0
+	github.com/zclconf/go-cty v1.18.1
 )
 
 require (
