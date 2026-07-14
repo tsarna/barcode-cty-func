@@ -1,0 +1,37 @@
+//functy:extern
+
+// The barcode function, provided in Go by barcode-cty-func (GetBarcodeFunctions). This
+// file declares its signature only — it is never compiled, and nothing here is
+// callable.
+//
+// It exists because cty cannot express the last argument. The options object is
+// *optional*, and the only way cty offers to make an argument optional is to make it
+// variadic — which says it may be repeated, when it may not. cty also has no way to
+// describe the object's shape, so it is declared dynamic: reflected from cty alone the
+// function reads as `barcode(type, data, ...options)`, and what may go in that object is
+// anybody's guess. Below it has a name, a type, and its four attributes.
+
+// A barcode image, as a PNG `bytes` value (its content type is set to "image/png").
+func barcode(
+    type: string,  // "qr", "datamatrix", "aztec", "pdf417", "code128", "code93", "code39", "codabar", "ean13", "ean8", or "2of5"
+    data: string,  // what is valid depends on the symbology: EAN-13 wants 12 or 13 digits, Code 39 an uppercase alphanumeric subset, QR anything
+    // Sizing and encoding options — every attribute is itself optional:
+    //
+    //   scale             whole-number multiplier on the symbology's natural size (default 4)
+    //   width, height     an explicit pixel size instead
+    //   error_correction  "L", "M", "Q" or "H" — QR only (default "M")
+    //
+    // Size the image by `scale`, or by an explicit `width` and `height`. The two are
+    // mutually exclusive, since both decide the horizontal size, and `width` requires
+    // `height`. `height` alone is allowed, and pairs with a scaled width. Given neither,
+    // a 1D symbology gets a conventional bar height and a 2D one is square.
+    //
+    // Passing `error_correction` with any type but "qr" is an error, not a value
+    // silently ignored.
+    options?: object({
+        scale            = optional(number),
+        width            = optional(number),
+        height           = optional(number),
+        error_correction = optional(string),
+    }),
+) -> bytes

@@ -121,14 +121,32 @@ func validTypeList() string {
 var BarcodeFunc = function.New(&function.Spec{
 	Description: "Generates a barcode image as a bytes object with content_type image/png",
 	Params: []function.Parameter{
-		{Name: "type", Type: cty.String},
-		{Name: "data", Type: cty.String},
+		{
+			Name:        "type",
+			Type:        cty.String,
+			Description: "Barcode symbology: \"qr\", \"datamatrix\", \"aztec\", \"pdf417\", \"code128\", \"code93\", \"code39\", \"codabar\", \"ean13\", \"ean8\", or \"2of5\"",
+		},
+		{
+			Name:        "data",
+			Type:        cty.String,
+			Description: "The data to encode. What is valid depends on the symbology: EAN-13 wants 12 or 13 digits, Code 39 an uppercase alphanumeric subset, QR anything.",
+		},
 	},
+	// The variadic is how cty fakes an *optional* options object — the only way it
+	// offers — and it costs the object its shape as well as its name: cty has no way
+	// to say that it holds scale/width/height/error_correction, so it is declared
+	// dynamic. externs.cty says what it really is; the description below is what a
+	// non-functy cty host has to go on.
 	VarParam: &function.Parameter{
 		Name:             "options",
 		Type:             cty.DynamicPseudoType,
 		AllowDynamicType: true,
 		AllowNull:        true,
+		Description: "Optional object (at most one) with any of: " +
+			"scale (positive integer, default 4), " +
+			"width and height (positive integers, in pixels), " +
+			"error_correction (\"L\", \"M\", \"Q\" or \"H\"; QR only, default \"M\"). " +
+			"scale and width are mutually exclusive, and width requires height.",
 	},
 	Type: func(args []cty.Value) (cty.Type, error) {
 		if len(args) > 3 {

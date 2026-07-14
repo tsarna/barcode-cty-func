@@ -83,6 +83,20 @@ The optional third argument is an object. All fields are optional. `scale` and `
 
 These defaults can always be overridden with an explicit `height` option.
 
+## Signature declarations
+
+The tables above are what `barcode` really accepts. Its cty metadata cannot say so: the options object is *optional*, and the only way cty offers to make an argument optional is to make it variadic — which claims it may be repeated, when it may not — and cty has no way to describe the object's shape, so it is `dynamic`. Reflected from cty alone the function reads as `barcode(type, data, ...options)`, with all four options invisible.
+
+So `externs.cty` declares the real signature, as a [functy](https://github.com/tsarna/functy) `//functy:extern` declaration, with the options object spelled out attribute by attribute. The file is never compiled and declares nothing callable; it exists so that `help()`, generated documentation, and editor tooling can show what the cty metadata cannot.
+
+`Externs()` returns it as opaque bytes — this package does not import functy and does not parse them:
+
+```go
+parser.RegisterExterns(barcodecty.Externs(), barcodecty.ExternsFilename)
+```
+
+A host that is not a functy host can ignore it entirely; the cty `Description` on the function and every parameter (including the full option list) is still populated.
+
 ## Examples
 
 ### QR code with defaults
