@@ -12,8 +12,10 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/testify v1.11.1 h1:7s2iGBzp5EwR7/aIZr8ao5+dra3wiQyKjjFuvgVKu7U=
 github.com/stretchr/testify v1.11.1/go.mod h1:wZwfW3scLgRK+23gO65QZefKpKQRnfz6sD981Nm4B6U=
-github.com/tsarna/bytes-cty-type v0.2.0 h1:eVK3/ArRqyLWjEtWuzPgSWTO06QYxfxTZPW0/eaPnnY=
-github.com/tsarna/bytes-cty-type v0.2.0/go.mod h1:6mccxA2V3RLoOkntV5La6GkURL2vtBYaZegmksLopow=
+github.com/tsarna/bytes-cty-type v0.3.0 h1:J+3og2vFP/+WlmWVBfgaa9UQMrLnuGnP5PqyT34WK4w=
+github.com/tsarna/bytes-cty-type v0.3.0/go.mod h1:tUoLqLYtZw1myQxXOr6wKRAhNIX2DkH4CIu3pvoA7hU=
+github.com/tsarna/go2cty2go v0.3.0 h1:OhwtKQS8iFRWYGo2lAaNyn6TMiB4OsQXDDJpoBFsxjc=
+github.com/tsarna/go2cty2go v0.3.0/go.mod h1:RYrXdiw6Ukuz8z7O+ewhMRXexYpcpJmjrUVJZJ9DtKU=
 github.com/tsarna/rich-cty-types v0.5.1 h1:C1NtseqKtw9zYDzGIc8QJtUEjjc2KDkzAJ7RdNklO9Q=
 github.com/tsarna/rich-cty-types v0.5.1/go.mod h1:F0cK50wpbbz+oJKdBfJy3ioqYXRfvoHbgJ3mJisbeAc=
 github.com/zclconf/go-cty v1.19.0 h1:IV8WdqYZc2c5rLX9bEoLNXKojBAp0MZPBHMIrCoa/s4=
