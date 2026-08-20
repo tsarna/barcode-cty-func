@@ -4,7 +4,7 @@ go 1.25.8
 
 require (
 	github.com/boombuler/barcode v1.1.0
-	github.com/stretchr/testify v1.12.0
+	github.com/stretchr/testify v1.12.1
 	github.com/tsarna/bytes-cty-type v0.3.0
 	github.com/zclconf/go-cty v1.19.0
 )
@@ -14,6 +14,6 @@ require (
 	github.com/apparentlymart/go-textseg/v17 v17.0.1 // indirect
 	github.com/tsarna/go2cty2go v0.3.0 // indirect
 	github.com/tsarna/rich-cty-types v0.5.1 // indirect
+	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	golang.org/x/text v0.11.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
