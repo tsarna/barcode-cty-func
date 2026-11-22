@@ -14,8 +14,8 @@ github.com/tsarna/go2cty2go v0.3.0 h1:OhwtKQS8iFRWYGo2lAaNyn6TMiB4OsQXDDJpoBFsxj
 github.com/tsarna/go2cty2go v0.3.0/go.mod h1:RYrXdiw6Ukuz8z7O+ewhMRXexYpcpJmjrUVJZJ9DtKU=
 github.com/tsarna/rich-cty-types v0.5.1 h1:C1NtseqKtw9zYDzGIc8QJtUEjjc2KDkzAJ7RdNklO9Q=
 github.com/tsarna/rich-cty-types v0.5.1/go.mod h1:F0cK50wpbbz+oJKdBfJy3ioqYXRfvoHbgJ3mJisbeAc=
-github.com/zclconf/go-cty v1.19.0 h1:IV8WdqYZc2c5rLX9bEoLNXKojBAp0MZPBHMIrCoa/s4=
-github.com/zclconf/go-cty v1.19.0/go.mod h1:12W89jGn3JCOIQi7infWr9m80rOkb5RNYJqXMZcN4c8=
+github.com/zclconf/go-cty v1.20.0 h1:V2Mh9pu2xWPATCY7US3LnGBNSq/AAZDsqQZmmOAV7DI=
+github.com/zclconf/go-cty v1.20.0/go.mod h1:12W89jGn3JCOIQi7infWr9m80rOkb5RNYJqXMZcN4c8=
 go.yaml.in/yaml/v3 v3.0.5 h1:N6y/pJk8buWs9NY5ERU2HSMfm+IuD/OtfdAnq6kESPw=
 go.yaml.in/yaml/v3 v3.0.5/go.mod h1:HVTZu1O7/Vkt2N+BFy8Zza+lnLsABggaTM2ZpNIGuKg=
 golang.org/x/text v0.11.0 h1:LAntKIrcmeSKERyiOh0XMV39LXS8IE9UL2yP7+f5ij4=
