@@ -3,7 +3,7 @@ module github.com/tsarna/barcode-cty-func
 go 1.25.8
 
 require (
-	github.com/boombuler/barcode v1.1.0
+	github.com/boombuler/barcode v1.1.1
 	github.com/stretchr/testify v1.12.1
 	github.com/tsarna/bytes-cty-type v0.3.0
 	github.com/zclconf/go-cty v1.20.0
