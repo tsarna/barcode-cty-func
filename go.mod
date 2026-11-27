@@ -1,3 +1,4 @@
+// Deprecated: merged into github.com/tsarna/ctyx as github.com/tsarna/ctyx/barcodecty.
 module github.com/tsarna/barcode-cty-func
 
 go 1.25.8

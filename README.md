@@ -1,5 +1,13 @@
 # barcode-cty-func
 
+> [!WARNING]
+> **Moved.** This package is now `github.com/tsarna/ctyx/barcodecty`, part of
+> [ctyx](https://github.com/tsarna/ctyx) — nine cty helper modules merged into
+> one. The code and API are unchanged; only the import path moved. This
+> repository is archived and frozen at v0.3.0.
+>
+> `go get github.com/tsarna/ctyx`
+
 [![CI](https://github.com/tsarna/barcode-cty-func/actions/workflows/ci.yml/badge.svg)](https://github.com/tsarna/barcode-cty-func/actions/workflows/ci.yml)
 
 A Go module providing barcode image generation as a [go-cty](https://github.com/zclconf/go-cty) / HCL2 function. Supports 11 barcode formats and returns PNG images as `bytes` objects.
